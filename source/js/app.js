@@ -10,9 +10,18 @@ data: {
     zip_code: '1050-053 Lisboa',
     country: 'Portugal'
   },
-  nif: ''
+  nif: '',
+  showNifCompleted: false
 },
 methods: {
-
-}
+  verifyNif: function (event) {
+    var nif = event.target.value;
+    if (nif.length == 9 && (/^\d+$/.test(nif))) {
+      this.showNifCompleted = !this.showNifCompleted
+    }
+    else {
+      this.showNifCompleted = false
+    }
+  }
+  }
 })

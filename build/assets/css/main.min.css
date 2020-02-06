@@ -214,20 +214,20 @@ input[type="reset"],
 input[type="button"],
 input[type="checkbox"] {
   display: inline-block;
-  padding: 15px 39px;
+  width: 250px;
+  height: 40px;
   color: #fff;
   text-align: center;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: bold;
   text-decoration: none;
   white-space: nowrap;
-  background-color: #000;
+  background-color: #18BB80;
   border-style: none;
-  border-radius: 8px;
+  border-radius: 4px;
   cursor: pointer;
   box-sizing: border-box;
-  transition: all 0.2s ease;
-  margin: 40px 0px; }
+  transition: all 0.2s ease; }
   .button:hover, .button:active, .button:focus,
   button:hover,
   button:active,
@@ -274,12 +274,11 @@ img::-moz-selection {
 body {
   -webkit-tap-highlight-color: transparent; }
 
-h1, h2, h3, h4, h5, h6, p, a, .invoice-text {
+.modal {
   font-family: 'Oxygen', sans-serif;
   font-style: normal;
   text-align: left;
-  color: #707070;
-  margin: 0; }
+  color: #707070; }
 
 h1, .main-title {
   font-size: 24px;
@@ -298,7 +297,8 @@ h3 {
 
 .invoice-text {
   font-size: 6px;
-  line-height: 10px; }
+  line-height: 10px;
+  margin: 0; }
 
 .flex-video {
   height: 0;
@@ -375,10 +375,21 @@ body {
 .pais-section, .nif-section {
   padding: 20px 0px; }
 
+.nif-input {
+  display: flex;
+  padding: 10px 0px;
+  margin-right: 10px; }
+
+.nif-checkmark {
+  display: flex;
+  align-items: center;
+  margin: 0px 10px; }
+  .nif-checkmark p {
+    margin: 0px 5px; }
+
 input {
   border: 1px solid #CCCCCC;
   border-radius: 4px;
   width: 300px;
   height: 40px;
-  margin: 10px 0px;
   padding: 10px; }

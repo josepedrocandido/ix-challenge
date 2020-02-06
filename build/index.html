@@ -12,6 +12,7 @@
       <meta name="keywords" content="Page Keywords">
       <meta name="author" content="José Cândido">
       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
    </head>
    <body>
       <div id="app">
@@ -28,8 +29,15 @@
                   </div>
                   <div class="nif-section">
                     <h3>NIF:</h3>
-                    <input v-model="nif" placeholder="Introduza o NIF">
+                    <div class="nif-input">
+                      <input v-model="nif" v-on:input="verifyNif" maxlength="9" placeholder="Introduza o NIF">
+                      <div v-if="showNifCompleted" id="check" class="nif-checkmark">
+                        <img src="./assets/img/icon.svg" alt="check icon">
+                        <p>NIF Válido</p>
+                      </div>
+                    </div>
                   </div>
+                  <button type="button" name="button">Continuar</button>
                </div>
                <div class="invoice-section">
                   <img class="plant" src="./assets/img/Plant.png" alt="Plant">
