@@ -21,7 +21,15 @@
             <div class="modal-content">
                <div class="modal-form">
                   <h1>Vamos personalizar a factura!</h1>
-                  <input v-model="nif" placeholder="Introduza o NIF">
+                  <h2>Defina os seus dados</h2>
+                  <p>Adicione o País e o NIF. Os dados apresentados serão pré-preenchidos nas suas facturas.</p>
+                  <div class="pais-section">
+                    <h3>País:</h3>
+                  </div>
+                  <div class="nif-section">
+                    <h3>NIF:</h3>
+                    <input v-model="nif" placeholder="Introduza o NIF">
+                  </div>
                </div>
                <div class="invoice-section">
                   <img class="plant" src="./assets/img/Plant.png" alt="Plant">
