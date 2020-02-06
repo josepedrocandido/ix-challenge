@@ -5,30 +5,41 @@
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="stylesheet" href="assets/css/main.min.css" />
       <link rel="icon" href="./assets/img/" sizes="any">
-
       <!-- Primary Meta Tags -->
       <title>Page Title</title>
       <meta name="title" content="Page Title">
       <meta name="description" content="Page Description">
       <meta name="keywords" content="Page Keywords">
       <meta name="author" content="José Cândido">
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
    </head>
    <body>
-       <div class="modal">
-         <div class="progression-bar">
-
+      <div id="app">
+         <div class="modal">
+            <div class="progression-bar">
+            </div>
+            <div class="modal-content">
+               <div class="modal-form">
+                  <h1>Vamos personalizar a factura!</h1>
+                  <input v-model="nif" placeholder="Introduza o NIF">
+               </div>
+               <div class="invoice-section">
+                  <img class="plant" src="./assets/img/Plant.png" alt="Plant">
+                  <img class="paper" src="./assets/img/Paper Back.svg" alt="Paper Back">
+                  <img class="factura" src="./assets/img/Factura.png" alt="Factura">
+                  <div class="invoice-header">
+                     <p class="invoice-text"><b>{{ company_name }}</b></p>
+                     <p class="invoice-text">{{ adress.street }}, {{ adress.number }}</p>
+                     <p class="invoice-text">{{ adress.zip_code }}</p>
+                     <p class="invoice-text">{{ adress.country }}</p>
+                     <p class="invoice-text"><b>Email: </b>{{ email }}</p>
+                     <p class="invoice-text"><b>Tel: </b>{{ phone }}</p>
+                     <p class="invoice-text"><b>NIF: </b>{{ nif }}</p>
+                  </div>
+               </div>
+            </div>
          </div>
-         <div class="modal-content">
-           <div class="modal-form">
-             <h1>Vamos personalizar a factura!</h1>
-           </div>
-           <div class="invoice-section">
-             <img class="plant" src="./assets/img/Plant.png" alt="Plant">
-             <img class="paper" src="./assets/img/Paper Back.svg" alt="Paper Back">
-             <img class="factura" src="./assets/img/Factura.png" alt="Factura">
-           </div>
-         </div>
-       </div>
-
+      </div>
+      <script src="./assets/js/app.js"></script>
    </body>
 </html>

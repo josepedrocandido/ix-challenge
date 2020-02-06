@@ -274,15 +274,21 @@ img::-moz-selection {
 body {
   -webkit-tap-highlight-color: transparent; }
 
-h1, h2, h3, h4, h5, h6, p, a {
+h1, h2, h3, h4, h5, h6, p, a, .invoice-text {
   font-family: 'Oxygen', sans-serif;
   font-style: normal;
-  text-align: left; }
+  text-align: left;
+  color: #707070;
+  margin: 0; }
 
 h1, .main-title {
   font-size: 24px;
   line-height: 50px;
   color: #707070; }
+
+.invoice-text {
+  font-size: 6px;
+  line-height: 10px; }
 
 .flex-video {
   height: 0;
@@ -333,7 +339,7 @@ body {
   position: relative;
   overflow: hidden; }
 
-.paper, .factura, .plant {
+.paper, .factura, .plant, .invoice-header {
   position: absolute; }
 
 .paper {
@@ -350,3 +356,8 @@ body {
   z-index: 2;
   bottom: -60px;
   left: -60px; }
+
+.invoice-header {
+  z-index: 3;
+  top: 50px;
+  left: 130px; }
