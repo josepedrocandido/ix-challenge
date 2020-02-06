@@ -332,3 +332,21 @@ body {
   background-size: covers;
   position: relative;
   overflow: hidden; }
+
+.paper, .factura, .plant {
+  position: absolute; }
+
+.paper {
+  z-index: 0;
+  top: 30px;
+  left: 70px; }
+
+.factura {
+  z-index: 1;
+  top: 10px;
+  left: 90px; }
+
+.plant {
+  z-index: 2;
+  bottom: -60px;
+  left: -60px; }
